@@ -5,13 +5,13 @@
 class Waniis < Formula
   desc "Waniis from the command line: start, search, stop and share sessions, and export them"
   homepage "https://waniis.com"
-  version "0.1.2"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.2/waniis_0.1.2_darwin_amd64.tar.gz"
-      sha256 "708e19297161bec49f9f6584deee2b50fda24ff22113fe59d262759aac1da609"
+      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.3/waniis_0.1.3_darwin_amd64.tar.gz"
+      sha256 "24ca0cdc4a923a8f80fa4ed2975a7ea94753146dee739310224ad32048521640"
 
       define_method(:install) do
         bin.install "waniis"
@@ -21,8 +21,8 @@ class Waniis < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.2/waniis_0.1.2_darwin_arm64.tar.gz"
-      sha256 "3543424c1052da5c166d05a86cf9cdfcd6c6a978204386c931047d39cccd2f3e"
+      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.3/waniis_0.1.3_darwin_arm64.tar.gz"
+      sha256 "45435d0b518778d703dd3445b8bed1c014c2faebdc7c1408f4c62461d8dbda82"
 
       define_method(:install) do
         bin.install "waniis"
@@ -35,8 +35,8 @@ class Waniis < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.2/waniis_0.1.2_linux_amd64.tar.gz"
-      sha256 "c888d92b4253a18dffa462f80853f169164150661d6059054f705cd4c2900dd1"
+      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.3/waniis_0.1.3_linux_amd64.tar.gz"
+      sha256 "bd6d83db7a69953fd183190a86d0c12f59762bdac48fd491346787bed98d3113"
       define_method(:install) do
         bin.install "waniis"
         bash_completion.install "completions/waniis.bash" => "waniis"
@@ -45,8 +45,8 @@ class Waniis < Formula
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.2/waniis_0.1.2_linux_armv6.tar.gz"
-      sha256 "d7ee00ce8a3020301cd1cc6f2e545dbb5b94f5e3e1ece2f4b7dd1dd5de904105"
+      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.3/waniis_0.1.3_linux_armv6.tar.gz"
+      sha256 "6bf99782d7bc132440619cad790e173e5385787479ccd501ecffbf3544d8afa6"
       define_method(:install) do
         bin.install "waniis"
         bash_completion.install "completions/waniis.bash" => "waniis"
@@ -55,8 +55,8 @@ class Waniis < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.2/waniis_0.1.2_linux_arm64.tar.gz"
-      sha256 "a1f6db74da9c24d415440cd9a943744dbd1f1abe13cada37d76804277e64db23"
+      url "https://github.com/elmkarami/waniis-cli/releases/download/v0.1.3/waniis_0.1.3_linux_arm64.tar.gz"
+      sha256 "c5a9af877197debc2658b94675c173ed3f7decd0fcdd648eec3bfd2f4de11f2d"
       define_method(:install) do
         bin.install "waniis"
         bash_completion.install "completions/waniis.bash" => "waniis"
